@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <div class="motion-field" aria-hidden="true"></div>
+    <canvas class="spark-canvas" id="sparkCanvas" aria-hidden="true"></canvas>
+    <div class="cursor-glow" aria-hidden="true"></div>
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="钟浩">
@@ -36,7 +39,16 @@
           <p class="eyebrow" data-zh="华东师范大学 · 软件工程学院" data-en="East China Normal University · School of Software Engineering">
             华东师范大学 · 软件工程学院
           </p>
-          <h1 id="intro-title" data-zh="钟浩" data-en="Zhong Hao">钟浩</h1>
+          <div class="identity-lockup">
+            <h1 id="intro-title" data-zh="钟浩" data-en="Zhong Hao">钟浩</h1>
+            <figure class="portrait-panel" aria-label="钟浩的个人照片">
+              <div class="portrait-orbit" aria-hidden="true"></div>
+              <img src="assets/profile.jpg" alt="钟浩的个人照片" class="portrait">
+              <figcaption>
+                <span data-zh="GitHub Pages" data-en="GitHub Pages">GitHub Pages</span>
+              </figcaption>
+            </figure>
+          </div>
           <p class="lead" data-zh="面向人工智能、机器学习与量化交易持续探索，把竞赛、项目与长期学习沉淀为可见的作品。" data-en="Exploring artificial intelligence, machine learning, and quantitative trading while turning competitions, projects, and long-term study into visible work.">
             面向人工智能、机器学习与量化交易持续探索，把竞赛、项目与长期学习沉淀为可见的作品。
           </p>
@@ -53,14 +65,6 @@
             <span data-zh="量化交易" data-en="Quant Trading">量化交易</span>
           </div>
         </div>
-
-        <figure class="portrait-panel" aria-label="钟浩的个人照片">
-          <div class="portrait-orbit" aria-hidden="true"></div>
-          <img src="assets/profile.jpg" alt="钟浩的个人照片" class="portrait">
-          <figcaption>
-            <span data-zh="Tomhao10225101490.github.io" data-en="Tomhao10225101490.github.io">Tomhao10225101490.github.io</span>
-          </figcaption>
-        </figure>
       </section>
 
       <section class="content-section section-reveal" id="profile" aria-labelledby="profile-title">
