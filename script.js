@@ -84,11 +84,15 @@ const setPointerPosition = (event) => {
   const y = (event.clientY - centerY) / rect.height;
   const moveX = Math.max(-1, Math.min(1, x)) * 10;
   const moveY = Math.max(-1, Math.min(1, y)) * 10;
+  root.style.setProperty("--orbit-shift-x", `${moveX * 0.45}px`);
+  root.style.setProperty("--orbit-shift-y", `${moveY * 0.45}px`);
   portraitPanel.style.transform = `translate3d(${moveX}px, ${moveY}px, 0) rotateX(${-moveY * 0.8}deg) rotateY(${moveX * 0.8}deg)`;
 };
 
 const resetPointer = () => {
   root.style.setProperty("--cursor-opacity", "0");
+  root.style.setProperty("--orbit-shift-x", "0px");
+  root.style.setProperty("--orbit-shift-y", "0px");
   if (portraitPanel) {
     portraitPanel.style.transform = "";
   }
@@ -125,8 +129,47 @@ tiltTargets.forEach((card) => {
 const canvas = document.querySelector("#sparkCanvas");
 const context = canvas?.getContext("2d");
 let particles = [];
+let streaks = [];
 let pointer = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
 let animationFrame = 0;
+let particleTick = 0;
+
+const particlePalette = [
+  "102, 229, 186",
+  "117, 215, 255",
+  "216, 164, 95",
+  "245, 241, 232"
+];
+
+const seededUnit = (seed) => {
+  const value = Math.sin(seed * 127.1) * 43758.5453123;
+  return value - Math.floor(value);
+};
+
+const createParticle = (index, width, height) => {
+  const depth = 0.42 + seededUnit(index + 8) * 0.82;
+  const speed = 0.16 + depth * 0.22;
+
+  return {
+    x: seededUnit(index + 1) * width,
+    y: seededUnit(index + 2) * height,
+    vx: (seededUnit(index + 3) - 0.42) * speed,
+    vy: (seededUnit(index + 4) - 0.34) * speed,
+    size: 0.8 + depth * 1.35,
+    depth,
+    color: particlePalette[index % particlePalette.length],
+    phase: seededUnit(index + 5) * Math.PI * 2
+  };
+};
+
+const createStreak = (index, width, height) => ({
+  x: seededUnit(index + 11) * width,
+  y: seededUnit(index + 12) * height,
+  length: 56 + seededUnit(index + 13) * 96,
+  speed: 1.4 + seededUnit(index + 14) * 1.8,
+  alpha: 0.08 + seededUnit(index + 15) * 0.12,
+  color: particlePalette[index % 3]
+});
 
 const resizeCanvas = () => {
   if (!canvas || !context) {
@@ -142,14 +185,10 @@ const resizeCanvas = () => {
   canvas.style.height = `${height}px`;
   context.setTransform(ratio, 0, 0, ratio, 0, 0);
 
-  const count = Math.max(26, Math.min(74, Math.floor(width / 18)));
-  particles = Array.from({ length: count }, (_, index) => ({
-    x: (index * 97) % width,
-    y: (index * 53) % height,
-    vx: (Math.sin(index * 12.989) * 0.18) + 0.12,
-    vy: (Math.cos(index * 78.233) * 0.16) + 0.08,
-    size: 1 + (index % 3) * 0.45
-  }));
+  const count = Math.max(52, Math.min(150, Math.floor(width / 10)));
+  const streakCount = Math.max(5, Math.min(11, Math.floor(width / 170)));
+  particles = Array.from({ length: count }, (_, index) => createParticle(index, width, height));
+  streaks = Array.from({ length: streakCount }, (_, index) => createStreak(index, width, height));
 };
 
 const drawParticles = () => {
@@ -160,33 +199,66 @@ const drawParticles = () => {
   const width = document.documentElement.clientWidth;
   const height = window.innerHeight;
   context.clearRect(0, 0, width, height);
-  context.fillStyle = "rgba(245, 241, 232, 0.54)";
-  context.strokeStyle = "rgba(87, 199, 162, 0.12)";
-  context.lineWidth = 1;
+  context.save();
+  context.globalCompositeOperation = "lighter";
+  particleTick += 0.012;
+
+  streaks.forEach((streak, index) => {
+    const endX = streak.x + streak.length;
+    const endY = streak.y + streak.length * 0.28;
+    const gradient = context.createLinearGradient(streak.x, streak.y, endX, endY);
+    gradient.addColorStop(0, `rgba(${streak.color}, 0)`);
+    gradient.addColorStop(0.5, `rgba(${streak.color}, ${streak.alpha})`);
+    gradient.addColorStop(1, `rgba(${streak.color}, 0)`);
+
+    context.strokeStyle = gradient;
+    context.lineWidth = 1;
+    context.beginPath();
+    context.moveTo(streak.x, streak.y);
+    context.lineTo(endX, endY);
+    context.stroke();
+
+    streak.x += streak.speed;
+    streak.y += streak.speed * 0.28;
+
+    if (streak.x > width + streak.length || streak.y > height + streak.length) {
+      streak.x = -streak.length;
+      streak.y = seededUnit(index + particleTick) * height * 0.72;
+    }
+  });
 
   particles.forEach((particle, index) => {
     const dx = pointer.x - particle.x;
     const dy = pointer.y - particle.y;
     const distance = Math.hypot(dx, dy);
-    const pull = distance < 180 ? (180 - distance) / 180 : 0;
+    const pull = distance < 220 ? (220 - distance) / 220 : 0;
+    const wave = Math.sin(particleTick * 2 + particle.phase) * 0.18;
 
-    particle.x += particle.vx + dx * pull * 0.002;
-    particle.y += particle.vy + dy * pull * 0.002;
+    particle.x += particle.vx + dx * pull * 0.0026 * particle.depth + wave * 0.08;
+    particle.y += particle.vy + dy * pull * 0.0026 * particle.depth + Math.cos(particleTick + particle.phase) * 0.05;
 
     if (particle.x > width + 20) particle.x = -20;
     if (particle.y > height + 20) particle.y = -20;
     if (particle.x < -20) particle.x = width + 20;
     if (particle.y < -20) particle.y = height + 20;
 
+    const pulse = 0.68 + Math.sin(particleTick * 3 + particle.phase) * 0.22;
+    context.fillStyle = `rgba(${particle.color}, ${0.22 + particle.depth * 0.26})`;
+    context.shadowColor = `rgba(${particle.color}, 0.32)`;
+    context.shadowBlur = 7 * particle.depth;
     context.beginPath();
-    context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+    context.arc(particle.x, particle.y, particle.size * pulse, 0, Math.PI * 2);
     context.fill();
+    context.shadowBlur = 0;
 
     for (let nextIndex = index + 1; nextIndex < particles.length; nextIndex += 1) {
       const next = particles[nextIndex];
       const gap = Math.hypot(next.x - particle.x, next.y - particle.y);
-      if (gap < 115) {
-        context.globalAlpha = (1 - gap / 115) * 0.8;
+      const depthGap = Math.abs(next.depth - particle.depth);
+      if (gap < 126 && depthGap < 0.42) {
+        context.globalAlpha = (1 - gap / 126) * (0.22 + particle.depth * 0.3);
+        context.strokeStyle = `rgba(${particle.color}, 0.34)`;
+        context.lineWidth = 0.55 + particle.depth * 0.42;
         context.beginPath();
         context.moveTo(particle.x, particle.y);
         context.lineTo(next.x, next.y);
@@ -195,6 +267,8 @@ const drawParticles = () => {
     }
     context.globalAlpha = 1;
   });
+
+  context.restore();
 
   animationFrame = window.requestAnimationFrame(drawParticles);
 };
