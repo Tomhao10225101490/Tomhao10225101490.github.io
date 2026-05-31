@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="钟浩，华东师范大学软件工程学院，人工智能、机器学习、AI 交易与量化交易方向。">
+    <meta name="description" id="metaDescription" content="钟浩，华东师范大学软件工程学院，人工智能、机器学习、AI 交易与量化交易方向。">
     <title>钟浩 | Tomhao10225101490</title>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -15,84 +15,86 @@
     <div class="cursor-glow" aria-hidden="true"></div>
 
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="钟浩">
+      <a class="brand" href="#top" aria-label="钟浩" data-zh="钟浩" data-en="Zhong Hao" data-ja="鍾浩" data-ko="종하오" data-i18n="aria-label">
         <span class="brand-mark">ZH</span>
-        <span data-zh="钟浩" data-en="Zhong Hao">钟浩</span>
+        <span data-zh="钟浩" data-en="Zhong Hao" data-ja="鍾浩" data-ko="종하오">钟浩</span>
       </a>
 
-      <nav class="nav" aria-label="页面导航">
-        <a href="#profile" data-zh="简介" data-en="Profile">简介</a>
-        <a href="#honors" data-zh="荣誉" data-en="Honors">荣誉</a>
-        <a href="#interests" data-zh="兴趣" data-en="Interests">兴趣</a>
-        <a href="#projects" data-zh="项目" data-en="Projects">项目</a>
-        <a href="#contact" data-zh="联系" data-en="Contact">联系</a>
+      <nav class="nav" aria-label="页面导航" data-zh="页面导航" data-en="Site navigation" data-ja="ページナビゲーション" data-ko="페이지 내비게이션" data-i18n="aria-label">
+        <a href="#profile" data-zh="简介" data-en="Profile" data-ja="概要" data-ko="소개">简介</a>
+        <a href="#honors" data-zh="荣誉" data-en="Honors" data-ja="受賞" data-ko="수상">荣誉</a>
+        <a href="#interests" data-zh="兴趣" data-en="Interests" data-ja="関心" data-ko="관심">兴趣</a>
+        <a href="#projects" data-zh="项目" data-en="Projects" data-ja="プロジェクト" data-ko="프로젝트">项目</a>
+        <a href="#contact" data-zh="联系" data-en="Contact" data-ja="連絡" data-ko="연락">联系</a>
       </nav>
 
-      <button class="lang-toggle" type="button" id="langToggle" aria-pressed="false">
-        <span class="lang-option is-active" data-lang-label="zh">中</span>
-        <span class="lang-option" data-lang-label="en">EN</span>
-      </button>
+      <div class="lang-switcher" role="group" aria-label="语言选择" data-zh="语言选择" data-en="Language selection" data-ja="言語選択" data-ko="언어 선택" data-i18n="aria-label" id="langSwitcher">
+        <button class="lang-option is-active" type="button" data-lang-label="zh" aria-pressed="true">中</button>
+        <button class="lang-option" type="button" data-lang-label="en" aria-pressed="false">EN</button>
+        <button class="lang-option" type="button" data-lang-label="ja" aria-pressed="false">日</button>
+        <button class="lang-option" type="button" data-lang-label="ko" aria-pressed="false">한</button>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero section-reveal" aria-labelledby="intro-title">
         <div class="hero-copy">
-          <p class="eyebrow" data-zh="华东师范大学 · 软件工程学院" data-en="East China Normal University · School of Software Engineering">
+          <p class="eyebrow" data-zh="华东师范大学 · 软件工程学院" data-en="East China Normal University · School of Software Engineering" data-ja="華東師範大学 · ソフトウェア工程学院" data-ko="동화사범대학교 · 소프트웨어공학대학">
             华东师范大学 · 软件工程学院
           </p>
           <div class="identity-lockup">
-            <h1 id="intro-title" data-zh="钟浩" data-en="Zhong Hao">钟浩</h1>
-            <figure class="portrait-panel" aria-label="钟浩的个人照片">
+            <h1 id="intro-title" data-zh="钟浩" data-en="Zhong Hao" data-ja="鍾浩" data-ko="종하오">钟浩</h1>
+            <figure class="portrait-panel" aria-label="钟浩的个人照片" data-zh="钟浩的个人照片" data-en="Portrait photo of Zhong Hao" data-ja="鍾浩のプロフィール写真" data-ko="종하오의 프로필 사진" data-i18n="aria-label">
               <div class="portrait-orbit" aria-hidden="true"></div>
               <div class="satellite-system" aria-hidden="true">
                 <span class="satellite-ring satellite-ring-one"><i></i></span>
                 <span class="satellite-ring satellite-ring-two"><i></i></span>
                 <span class="satellite-ring satellite-ring-three"><i></i></span>
               </div>
-              <img src="assets/profile.jpg" alt="钟浩的个人照片" class="portrait">
+              <img src="assets/profile.jpg" alt="钟浩的个人照片" data-zh="钟浩的个人照片" data-en="Portrait photo of Zhong Hao" data-ja="鍾浩のプロフィール写真" data-ko="종하오의 프로필 사진" data-i18n="alt" class="portrait">
               <figcaption>
-                <span data-zh="GitHub Pages" data-en="GitHub Pages">GitHub Pages</span>
+                <span data-zh="GitHub Pages" data-en="GitHub Pages" data-ja="GitHub Pages" data-ko="GitHub Pages">GitHub Pages</span>
               </figcaption>
             </figure>
           </div>
-          <p class="lead" data-zh="面向人工智能、机器学习与量化交易持续探索，把竞赛、项目与长期学习沉淀为可见的作品。" data-en="Exploring artificial intelligence, machine learning, and quantitative trading while turning competitions, projects, and long-term study into visible work.">
+          <p class="lead" data-zh="面向人工智能、机器学习与量化交易持续探索，把竞赛、项目与长期学习沉淀为可见的作品。" data-en="Exploring artificial intelligence, machine learning, and quantitative trading while turning competitions, projects, and long-term study into visible work." data-ja="人工知能、機械学習、クオンツ取引を継続的に探求し、競技・プロジェクト・長期学習を目に見える成果へと結実させています。" data-ko="인공지능, 머신러닝, 퀀트 트레이딩을 꾸준히 탐구하며, 대회·프로젝트·장기 학습을 눈에 보이는 결과물로 남깁니다.">
             面向人工智能、机器学习与量化交易持续探索，把竞赛、项目与长期学习沉淀为可见的作品。
           </p>
 
-          <div class="hero-actions" aria-label="主要操作">
-            <a class="button primary" href="mailto:2177686531@qq.com" data-zh="发送邮件" data-en="Email Me">发送邮件</a>
-            <a class="button secondary" href="https://github.com/Tomhao10225101490" target="_blank" rel="noreferrer" data-zh="GitHub 主页" data-en="GitHub Profile">GitHub 主页</a>
+          <div class="hero-actions" aria-label="主要操作" data-zh="主要操作" data-en="Primary actions" data-ja="主要操作" data-ko="주요 작업" data-i18n="aria-label">
+            <a class="button primary" href="mailto:2177686531@qq.com" data-zh="发送邮件" data-en="Email Me" data-ja="メールを送る" data-ko="이메일 보내기">发送邮件</a>
+            <a class="button secondary" href="https://github.com/Tomhao10225101490" target="_blank" rel="noreferrer" data-zh="GitHub 主页" data-en="GitHub Profile" data-ja="GitHub プロフィール" data-ko="GitHub 프로필">GitHub 主页</a>
           </div>
 
-          <div class="signal-row" aria-label="个人关键词">
-            <span data-zh="人工智能" data-en="Artificial Intelligence">人工智能</span>
-            <span data-zh="机器学习" data-en="Machine Learning">机器学习</span>
-            <span data-zh="AI 交易" data-en="AI Trading">AI 交易</span>
-            <span data-zh="量化交易" data-en="Quant Trading">量化交易</span>
+          <div class="signal-row" aria-label="个人关键词" data-zh="个人关键词" data-en="Personal keywords" data-ja="キーワード" data-ko="개인 키워드" data-i18n="aria-label">
+            <span data-zh="人工智能" data-en="Artificial Intelligence" data-ja="人工知能" data-ko="인공지능">人工智能</span>
+            <span data-zh="机器学习" data-en="Machine Learning" data-ja="機械学習" data-ko="머신러닝">机器学习</span>
+            <span data-zh="AI 交易" data-en="AI Trading" data-ja="AI トレード" data-ko="AI 트레이딩">AI 交易</span>
+            <span data-zh="量化交易" data-en="Quant Trading" data-ja="クオンツ取引" data-ko="퀀트 트레이딩">量化交易</span>
           </div>
         </div>
       </section>
 
       <section class="content-section section-reveal" id="profile" aria-labelledby="profile-title">
-        <div class="section-kicker" data-zh="简介" data-en="Profile">简介</div>
+        <div class="section-kicker" data-zh="简介" data-en="Profile" data-ja="概要" data-ko="소개">简介</div>
         <div class="section-content">
-          <h2 id="profile-title" data-zh="以工程能力连接智能应用。" data-en="Connecting intelligent applications with engineering craft.">
+          <h2 id="profile-title" data-zh="以工程能力连接智能应用。" data-en="Connecting intelligent applications with engineering craft." data-ja="エンジニアリング力でインテリジェントな応用をつなぐ。" data-ko="엔지니어링 역량으로 지능형 응용을 연결합니다.">
             以工程能力连接智能应用。
           </h2>
-          <p data-zh="钟浩，就读于华东师范大学软件工程学院。关注人工智能、机器学习、AI 交易与量化交易，持续通过竞赛、项目和公开记录打磨自己的技术表达。" data-en="Zhong Hao studies at the School of Software Engineering, East China Normal University. His interests include artificial intelligence, machine learning, AI trading, and quantitative trading, refined through competitions, projects, and public notes.">
+          <p data-zh="钟浩，就读于华东师范大学软件工程学院。关注人工智能、机器学习、AI 交易与量化交易，持续通过竞赛、项目和公开记录打磨自己的技术表达。" data-en="Zhong Hao studies at the School of Software Engineering, East China Normal University. His interests include artificial intelligence, machine learning, AI trading, and quantitative trading, refined through competitions, projects, and public notes." data-ja="鍾浩は華東師範大学ソフトウェア工程学院に在籍。人工知能、機械学習、AI トレード、クオンツ取引に関心を持ち、競技・プロジェクト・公開記録を通じて技術表現を磨き続けています。" data-ko="종하오는 동화사범대학교 소프트웨어공학대학에 재학 중입니다. 인공지능, 머신러닝, AI 트레이딩, 퀀트 트레이딩에 관심을 두고, 대회·프로젝트·공개 기록을 통해 기술 표현을 꾸준히 다듬고 있습니다.">
             钟浩，就读于华东师范大学软件工程学院。关注人工智能、机器学习、AI 交易与量化交易，持续通过竞赛、项目和公开记录打磨自己的技术表达。
           </p>
-          <div class="profile-grid" aria-label="基础信息">
+          <div class="profile-grid" aria-label="基础信息" data-zh="基础信息" data-en="Basic information" data-ja="基本情報" data-ko="기본 정보" data-i18n="aria-label">
             <div>
-              <span data-zh="姓名" data-en="Name">姓名</span>
-              <strong data-zh="钟浩" data-en="Zhong Hao">钟浩</strong>
+              <span data-zh="姓名" data-en="Name" data-ja="氏名" data-ko="이름">姓名</span>
+              <strong data-zh="钟浩" data-en="Zhong Hao" data-ja="鍾浩" data-ko="종하오">钟浩</strong>
             </div>
             <div>
-              <span data-zh="学院" data-en="School">学院</span>
-              <strong data-zh="华东师范大学软件工程学院" data-en="School of Software Engineering, ECNU">华东师范大学软件工程学院</strong>
+              <span data-zh="学院" data-en="School" data-ja="所属" data-ko="학교">学院</span>
+              <strong data-zh="华东师范大学软件工程学院" data-en="School of Software Engineering, ECNU" data-ja="華東師範大学ソフトウェア工程学院" data-ko="동화사범대학교 소프트웨어공학대학">华东师范大学软件工程学院</strong>
             </div>
             <div>
-              <span data-zh="主页" data-en="Website">主页</span>
+              <span data-zh="主页" data-en="Website" data-ja="ウェブサイト" data-ko="웹사이트">主页</span>
               <strong>tomhao10225101490.github.io</strong>
             </div>
           </div>
@@ -100,281 +102,281 @@
       </section>
 
       <section class="content-section section-reveal" id="honors" aria-labelledby="honors-title">
-        <div class="section-kicker" data-zh="荣誉" data-en="Honors">荣誉</div>
+        <div class="section-kicker" data-zh="荣誉" data-en="Honors" data-ja="受賞" data-ko="수상">荣誉</div>
         <div class="section-content">
-          <h2 id="honors-title" data-zh="竞赛、项目、证书与荣誉记录。" data-en="Competitions, projects, certificates, and honors.">竞赛、项目、证书与荣誉记录。</h2>
+          <h2 id="honors-title" data-zh="竞赛、项目、证书与荣誉记录。" data-en="Competitions, projects, certificates, and honors." data-ja="競技、プロジェクト、資格、受賞の記録。" data-ko="대회, 프로젝트, 자격증, 수상 기록.">竞赛、项目、证书与荣誉记录。</h2>
           <ol class="timeline">
             <li>
               <time>2025.06</time>
-              <p data-zh="第二届人工智能创新应用大赛二等奖" data-en="Second Prize, 2nd Artificial Intelligence Innovation Application Competition">第二届人工智能创新应用大赛二等奖</p>
+              <p data-zh="第二届人工智能创新应用大赛二等奖" data-en="Second Prize, 2nd Artificial Intelligence Innovation Application Competition" data-ja="第2回人工知能イノベーション応用コンテスト 二等賞" data-ko="제2회 인공지능 혁신 응용 대회 2등상">第二届人工智能创新应用大赛二等奖</p>
             </li>
             <li>
               <time>2025</time>
-              <p data-zh="JLPT N3 证书" data-en="JLPT N3 Certificate">JLPT N3 证书</p>
+              <p data-zh="JLPT N3 证书" data-en="JLPT N3 Certificate" data-ja="JLPT N3 資格" data-ko="JLPT N3 자격증">JLPT N3 证书</p>
             </li>
             <li>
               <time>2025</time>
-              <p data-zh="ECNU 软件工程学院优秀班干部" data-en="Outstanding Class Cadre, ECNU School of Software Engineering">ECNU 软件工程学院优秀班干部</p>
+              <p data-zh="ECNU 软件工程学院优秀班干部" data-en="Outstanding Class Cadre, ECNU School of Software Engineering" data-ja="ECNU ソフトウェア工程学院 優秀クラス幹部" data-ko="ECNU 소프트웨어공학대학 우수 학급 임원">ECNU 软件工程学院优秀班干部</p>
             </li>
             <li>
               <time>2025</time>
-              <p data-zh="组长身份完成华东师范大学校级创新创业训练计划项目结项" data-en="Completed an ECNU university-level Innovation and Entrepreneurship Training Program project as team leader">组长身份完成华东师范大学校级创新创业训练计划项目结项</p>
+              <p data-zh="组长身份完成华东师范大学校级创新创业训练计划项目结项" data-en="Completed an ECNU university-level Innovation and Entrepreneurship Training Program project as team leader" data-ja="華東師範大学 校级イノベーション・起業訓練計画プロジェクトをリーダーとして完了" data-ko="동화사범대학교 교내 창업·혁신 훈련 프로그램 프로젝트를 팀장으로 완료">组长身份完成华东师范大学校级创新创业训练计划项目结项</p>
             </li>
             <li>
               <time>2025</time>
-              <p data-zh="组员身份完成华东师范大学校级创新创业训练计划项目结项" data-en="Completed an ECNU university-level Innovation and Entrepreneurship Training Program project as team member">组员身份完成华东师范大学校级创新创业训练计划项目结项</p>
+              <p data-zh="组员身份完成华东师范大学校级创新创业训练计划项目结项" data-en="Completed an ECNU university-level Innovation and Entrepreneurship Training Program project as team member" data-ja="華東師範大学 校级イノベーション・起業訓練計画プロジェクトをメンバーとして完了" data-ko="동화사범대학교 교내 창업·혁신 훈련 프로그램 프로젝트를 팀원으로 완료">组员身份完成华东师范大学校级创新创业训练计划项目结项</p>
             </li>
             <li>
               <time>2025</time>
-              <p data-zh="蓝桥杯程序设计上海市二等奖" data-en="Second Prize, Lanqiao Cup Programming Contest, Shanghai Division">蓝桥杯程序设计上海市二等奖</p>
+              <p data-zh="蓝桥杯程序设计上海市二等奖" data-en="Second Prize, Lanqiao Cup Programming Contest, Shanghai Division" data-ja="藍橋杯プログラミングコンテスト 上海市 二等賞" data-ko="란차오컵 프로그래밍 대회 상하이 2등상">蓝桥杯程序设计上海市二等奖</p>
             </li>
             <li>
               <time>2025</time>
-              <p data-zh="华东师范大学 2024-2025 学年本科生优秀奖学金（三等）" data-en="ECNU 2024-2025 Undergraduate Outstanding Scholarship, Third Class">华东师范大学 2024-2025 学年本科生优秀奖学金（三等）</p>
+              <p data-zh="华东师范大学 2024-2025 学年本科生优秀奖学金（三等）" data-en="ECNU 2024-2025 Undergraduate Outstanding Scholarship, Third Class" data-ja="華東師範大学 2024-2025 学年度 学部優秀奨学金（三等）" data-ko="동화사범대학교 2024-2025 학년도 학부 우수 장학금(3등)">华东师范大学 2024-2025 学年本科生优秀奖学金（三等）</p>
             </li>
             <li>
               <time>2024</time>
-              <p data-zh="上海市挑战杯铜奖" data-en="Bronze Award, Challenge Cup Shanghai">上海市挑战杯铜奖</p>
+              <p data-zh="上海市挑战杯铜奖" data-en="Bronze Award, Challenge Cup Shanghai" data-ja="上海市チャレンジカップ 銅賞" data-ko="상하이 챌린지컵 동상">上海市挑战杯铜奖</p>
             </li>
             <li>
               <time>2024</time>
-              <p data-zh="ECNU 软件工程学院优秀班干部" data-en="Outstanding Class Cadre, ECNU School of Software Engineering">ECNU 软件工程学院优秀班干部</p>
+              <p data-zh="ECNU 软件工程学院优秀班干部" data-en="Outstanding Class Cadre, ECNU School of Software Engineering" data-ja="ECNU ソフトウェア工程学院 優秀クラス幹部" data-ko="ECNU 소프트웨어공학대학 우수 학급 임원">ECNU 软件工程学院优秀班干部</p>
             </li>
             <li>
               <time>2024</time>
-              <p data-zh="蓝桥杯程序设计上海市三等奖" data-en="Third Prize, Lanqiao Cup Programming Contest, Shanghai Division">蓝桥杯程序设计上海市三等奖</p>
+              <p data-zh="蓝桥杯程序设计上海市三等奖" data-en="Third Prize, Lanqiao Cup Programming Contest, Shanghai Division" data-ja="藍橋杯プログラミングコンテスト 上海市 三等賞" data-ko="란차오컵 프로그래밍 대회 상하이 3등상">蓝桥杯程序设计上海市三等奖</p>
             </li>
             <li>
               <time>2024</time>
-              <p data-zh="华东师范大学 2023-2024 学年本科生优秀奖学金（二等）" data-en="ECNU 2023-2024 Undergraduate Outstanding Scholarship, Second Class">华东师范大学 2023-2024 学年本科生优秀奖学金（二等）</p>
+              <p data-zh="华东师范大学 2023-2024 学年本科生优秀奖学金（二等）" data-en="ECNU 2023-2024 Undergraduate Outstanding Scholarship, Second Class" data-ja="華東師範大学 2023-2024 学年度 学部優秀奨学金（二等）" data-ko="동화사범대학교 2023-2024 학년도 학부 우수 장학금(2등)">华东师范大学 2023-2024 学年本科生优秀奖学金（二等）</p>
             </li>
             <li>
               <time>2023</time>
-              <p data-zh="华东师范大学 2022-2023 学年本科生优秀奖学金（二等）" data-en="ECNU 2022-2023 Undergraduate Outstanding Scholarship, Second Class">华东师范大学 2022-2023 学年本科生优秀奖学金（二等）</p>
+              <p data-zh="华东师范大学 2022-2023 学年本科生优秀奖学金（二等）" data-en="ECNU 2022-2023 Undergraduate Outstanding Scholarship, Second Class" data-ja="華東師範大学 2022-2023 学年度 学部優秀奨学金（二等）" data-ko="동화사범대학교 2022-2023 학년도 학부 우수 장학금(2등)">华东师范大学 2022-2023 学年本科生优秀奖学金（二等）</p>
             </li>
             <li>
               <time>2023</time>
-              <p data-zh="ECNU 软件工程学院优秀班干部" data-en="Outstanding Class Cadre, ECNU School of Software Engineering">ECNU 软件工程学院优秀班干部</p>
+              <p data-zh="ECNU 软件工程学院优秀班干部" data-en="Outstanding Class Cadre, ECNU School of Software Engineering" data-ja="ECNU ソフトウェア工程学院 優秀クラス幹部" data-ko="ECNU 소프트웨어공학대학 우수 학급 임원">ECNU 软件工程学院优秀班干部</p>
             </li>
           </ol>
         </div>
       </section>
 
       <section class="content-section section-reveal" id="interests" aria-labelledby="interests-title">
-        <div class="section-kicker" data-zh="兴趣" data-en="Interests">兴趣</div>
+        <div class="section-kicker" data-zh="兴趣" data-en="Interests" data-ja="関心" data-ko="관심">兴趣</div>
         <div class="section-content">
-          <h2 id="interests-title" data-zh="关注智能系统如何进入真实场景。" data-en="Focused on bringing intelligent systems into real scenarios.">
+          <h2 id="interests-title" data-zh="关注智能系统如何进入真实场景。" data-en="Focused on bringing intelligent systems into real scenarios." data-ja="インテリジェントシステムが現実の場面に入る方法に注目。" data-ko="지능형 시스템이 실제 현장에 적용되는 방식에 관심을 둡니다.">
             关注智能系统如何进入真实场景。
           </h2>
           <div class="interest-list">
             <article>
               <span>01</span>
-              <h3 data-zh="人工智能" data-en="Artificial Intelligence">人工智能</h3>
-              <p data-zh="理解模型能力边界，并探索智能应用的工程化落地。" data-en="Understanding model capabilities and exploring practical AI applications.">理解模型能力边界，并探索智能应用的工程化落地。</p>
+              <h3 data-zh="人工智能" data-en="Artificial Intelligence" data-ja="人工知能" data-ko="인공지능">人工智能</h3>
+              <p data-zh="理解模型能力边界，并探索智能应用的工程化落地。" data-en="Understanding model capabilities and exploring practical AI applications." data-ja="モデルの能力限界を理解し、インテリジェント応用のエンジニアリング実装を探求。" data-ko="모델의 능력 한계를 이해하고, 지능형 응용의 엔지니어링 구현을 탐구합니다.">理解模型能力边界，并探索智能应用的工程化落地。</p>
             </article>
             <article>
               <span>02</span>
-              <h3 data-zh="机器学习" data-en="Machine Learning">机器学习</h3>
-              <p data-zh="关注数据、算法、评估与可复现实验之间的闭环。" data-en="Building a loop across data, algorithms, evaluation, and reproducible experiments.">关注数据、算法、评估与可复现实验之间的闭环。</p>
+              <h3 data-zh="机器学习" data-en="Machine Learning" data-ja="機械学習" data-ko="머신러닝">机器学习</h3>
+              <p data-zh="关注数据、算法、评估与可复现实验之间的闭环。" data-en="Building a loop across data, algorithms, evaluation, and reproducible experiments." data-ja="データ、アルゴリズム、評価、再現可能な実験のループに注目。" data-ko="데이터, 알고리즘, 평가, 재현 가능한 실험 사이의 순환에 관심을 둡니다.">关注数据、算法、评估与可复现实验之间的闭环。</p>
             </article>
             <article>
               <span>03</span>
-              <h3 data-zh="AI 交易" data-en="AI Trading">AI 交易</h3>
-              <p data-zh="研究智能模型在交易分析、信号识别与决策辅助中的可能性。" data-en="Studying AI for market analysis, signal discovery, and decision support.">研究智能模型在交易分析、信号识别与决策辅助中的可能性。</p>
+              <h3 data-zh="AI 交易" data-en="AI Trading" data-ja="AI トレード" data-ko="AI 트레이딩">AI 交易</h3>
+              <p data-zh="研究智能模型在交易分析、信号识别与决策辅助中的可能性。" data-en="Studying AI for market analysis, signal discovery, and decision support." data-ja="取引分析、シグナル識別、意思決定支援におけるインテリジェントモデルの可能性を研究。" data-ko="거래 분석, 신호 인식, 의사결정 보조에서 지능형 모델의 가능성을 연구합니다.">研究智能模型在交易分析、信号识别与决策辅助中的可能性。</p>
             </article>
             <article>
               <span>04</span>
-              <h3 data-zh="量化交易" data-en="Quant Trading">量化交易</h3>
-              <p data-zh="用工程化方式理解策略、风险、回测与长期稳定性。" data-en="Approaching strategy, risk, backtesting, and long-term robustness through engineering.">用工程化方式理解策略、风险、回测与长期稳定性。</p>
+              <h3 data-zh="量化交易" data-en="Quant Trading" data-ja="クオンツ取引" data-ko="퀀트 트레이딩">量化交易</h3>
+              <p data-zh="用工程化方式理解策略、风险、回测与长期稳定性。" data-en="Approaching strategy, risk, backtesting, and long-term robustness through engineering." data-ja="エンジニアリング的な視点で戦略、リスク、バックテスト、長期安定性を理解。" data-ko="엔지니어링 방식으로 전략, 리스크, 백테스트, 장기 안정성을 이해합니다.">用工程化方式理解策略、风险、回测与长期稳定性。</p>
             </article>
           </div>
         </div>
       </section>
 
       <section class="content-section section-reveal" id="projects" aria-labelledby="projects-title">
-        <div class="section-kicker" data-zh="项目" data-en="Projects">项目</div>
+        <div class="section-kicker" data-zh="项目" data-en="Projects" data-ja="プロジェクト" data-ko="프로젝트">项目</div>
         <div class="section-content">
-          <h2 id="projects-title" data-zh="公开项目与长期练习。" data-en="Public projects and long-term practice.">
+          <h2 id="projects-title" data-zh="公开项目与长期练习。" data-en="Public projects and long-term practice." data-ja="公開プロジェクトと長期の練習。" data-ko="공개 프로젝트와 장기 연습.">
             公开项目与长期练习。
           </h2>
-          <p data-zh="以下整理自我的 GitHub 公开仓库，覆盖 Web 应用、AI 工具、课程实验、音乐工具、游戏和编程练习。每个项目都保留入口，方便继续迭代和回看。" data-en="Collected from my public GitHub repositories, these projects cover web applications, AI tools, course labs, music tools, games, and programming practice. Each card keeps a direct entry for future iteration and review.">
+          <p data-zh="以下整理自我的 GitHub 公开仓库，覆盖 Web 应用、AI 工具、课程实验、音乐工具、游戏和编程练习。每个项目都保留入口，方便继续迭代和回看。" data-en="Collected from my public GitHub repositories, these projects cover web applications, AI tools, course labs, music tools, games, and programming practice. Each card keeps a direct entry for future iteration and review." data-ja="以下は GitHub 公開リポジトリから整理したもので、Web アプリ、AI ツール、授業実験、音楽ツール、ゲーム、プログラミング練習をカバーしています。各プロジェクトには入口を残し、継続的な改善と振り返りがしやすい構成です。" data-ko="아래는 GitHub 공개 저장소에서 정리한 목록으로, 웹 앱, AI 도구, 수업 실험, 음악 도구, 게임, 프로그래밍 연습을 포함합니다. 각 프로젝트에는 바로가기를 남겨 계속 개선하고 되돌아보기 쉽게 구성했습니다.">
             以下整理自我的 GitHub 公开仓库，覆盖 Web 应用、AI 工具、课程实验、音乐工具、游戏和编程练习。每个项目都保留入口，方便继续迭代和回看。
           </p>
 
-          <div class="project-grid" aria-label="GitHub 项目列表">
+          <div class="project-grid" aria-label="GitHub 项目列表" data-zh="GitHub 项目列表" data-en="GitHub project list" data-ja="GitHub プロジェクト一覧" data-ko="GitHub 프로젝트 목록" data-i18n="aria-label">
             <article class="project-card">
-              <div class="project-meta"><span>CSS</span><span data-zh="主页" data-en="Website">主页</span></div>
+              <div class="project-meta"><span>CSS</span><span data-zh="主页" data-en="Website" data-ja="ウェブサイト" data-ko="웹사이트">主页</span></div>
               <h3>Tomhao10225101490.github.io</h3>
-              <p data-zh="个人 GitHub Pages 主页，用于展示简介、荣誉、兴趣方向、联系方式与项目入口。" data-en="Personal GitHub Pages site presenting profile, honors, interests, contact information, and project entries.">个人 GitHub Pages 主页，用于展示简介、荣誉、兴趣方向、联系方式与项目入口。</p>
-              <a href="https://github.com/Tomhao10225101490/Tomhao10225101490.github.io" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="个人 GitHub Pages 主页，用于展示简介、荣誉、兴趣方向、联系方式与项目入口。" data-en="Personal GitHub Pages site presenting profile, honors, interests, contact information, and project entries." data-ja="個人 GitHub Pages サイト。概要、受賞、関心分野、連絡先、プロジェクト入口を掲載。" data-ko="개인 GitHub Pages 사이트로, 소개·수상·관심 분야·연락처·프로젝트 바로가기를 제공합니다.">个人 GitHub Pages 主页，用于展示简介、荣誉、兴趣方向、联系方式与项目入口。</p>
+              <a href="https://github.com/Tomhao10225101490/Tomhao10225101490.github.io" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>TypeScript</span><span data-zh="游戏 AI" data-en="Game AI">游戏 AI</span></div>
+              <div class="project-meta"><span>TypeScript</span><span data-zh="游戏 AI" data-en="Game AI" data-ja="ゲーム AI" data-ko="게임 AI">游戏 AI</span></div>
               <h3>WuZiQi</h3>
-              <p data-zh="五子棋人机对战项目，围绕棋局交互与对战体验进行优化。" data-en="A Gomoku human-computer battle project focused on board interaction and play experience optimization.">五子棋人机对战项目，围绕棋局交互与对战体验进行优化。</p>
-              <a href="https://github.com/Tomhao10225101490/WuZiQi" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="五子棋人机对战项目，围绕棋局交互与对战体验进行优化。" data-en="A Gomoku human-computer battle project focused on board interaction and play experience optimization." data-ja="五目並べの人間対コンピュータ対戦プロジェクト。盤面操作と対戦体験の最適化に焦点。" data-ko="오목 인간 대 컴퓨터 대전 프로젝트. 기보 상호작용과 대전 경험 최적화에 초점.">五子棋人机对战项目，围绕棋局交互与对战体验进行优化。</p>
+              <a href="https://github.com/Tomhao10225101490/WuZiQi" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>JavaScript</span><span data-zh="金融工具" data-en="Finance Tool">金融工具</span></div>
+              <div class="project-meta"><span>JavaScript</span><span data-zh="金融工具" data-en="Finance Tool" data-ja="金融ツール" data-ko="금융 도구">金融工具</span></div>
               <h3>financial_assistant</h3>
-              <p data-zh="金融助手方向的 Web 项目，适合作为 AI 金融分析与交易辅助能力的实验入口。" data-en="A finance-assistant web project that can serve as an entry point for AI financial analysis and trading support experiments.">金融助手方向的 Web 项目，适合作为 AI 金融分析与交易辅助能力的实验入口。</p>
-              <a href="https://github.com/Tomhao10225101490/financial_assistant" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="金融助手方向的 Web 项目，适合作为 AI 金融分析与交易辅助能力的实验入口。" data-en="A finance-assistant web project that can serve as an entry point for AI financial analysis and trading support experiments." data-ja="金融アシスタント向け Web プロジェクト。AI 金融分析・取引支援の実験入口として適しています。" data-ko="금융 어시스턴트 웹 프로젝트. AI 금융 분석·거래 보조 실험의 출발점으로 적합합니다.">金融助手方向的 Web 项目，适合作为 AI 金融分析与交易辅助能力的实验入口。</p>
+              <a href="https://github.com/Tomhao10225101490/financial_assistant" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>TypeScript</span><span data-zh="音乐工具" data-en="Music Tool">音乐工具</span></div>
+              <div class="project-meta"><span>TypeScript</span><span data-zh="音乐工具" data-en="Music Tool" data-ja="音楽ツール" data-ko="음악 도구">音乐工具</span></div>
               <h3>get_music</h3>
-              <p data-zh="乐谱下载工具，帮助用户获取需要的音乐谱面资源。" data-en="A score-downloading tool designed to help users collect the sheet music resources they need.">乐谱下载工具，帮助用户获取需要的音乐谱面资源。</p>
-              <a href="https://github.com/Tomhao10225101490/get_music" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="乐谱下载工具，帮助用户获取需要的音乐谱面资源。" data-en="A score-downloading tool designed to help users collect the sheet music resources they need." data-ja="楽譜ダウンロードツール。必要な楽譜リソースの取得を支援。" data-ko="악보 다운로드 도구. 필요한 악보 자료를 얻도록 돕습니다.">乐谱下载工具，帮助用户获取需要的音乐谱面资源。</p>
+              <a href="https://github.com/Tomhao10225101490/get_music" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>TypeScript</span><span data-zh="音乐创作" data-en="Music Creation">音乐创作</span></div>
+              <div class="project-meta"><span>TypeScript</span><span data-zh="音乐创作" data-en="Music Creation" data-ja="音楽制作" data-ko="음악 창작">音乐创作</span></div>
               <h3>music_maker</h3>
-              <p data-zh="音乐创作网站，探索在线音乐生成、编辑和创作流程。" data-en="A music creation website exploring online music generation, editing, and creative workflows.">音乐创作网站，探索在线音乐生成、编辑和创作流程。</p>
-              <a href="https://github.com/Tomhao10225101490/music_maker" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="音乐创作网站，探索在线音乐生成、编辑和创作流程。" data-en="A music creation website exploring online music generation, editing, and creative workflows." data-ja="音楽制作サイト。オンライン生成、編集、制作フローを探求。" data-ko="음악 창작 웹사이트. 온라인 생성·편집·창작 흐름을 탐구합니다.">音乐创作网站，探索在线音乐生成、编辑和创作流程。</p>
+              <a href="https://github.com/Tomhao10225101490/music_maker" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>TypeScript</span><span data-zh="小程序" data-en="Mini Program">小程序</span></div>
+              <div class="project-meta"><span>TypeScript</span><span data-zh="小程序" data-en="Mini Program" data-ja="ミニプログラム" data-ko="미니 프로그램">小程序</span></div>
               <h3>ZhongYu_Piano_Studio</h3>
-              <p data-zh="钟于钢琴工作室管理小程序，面向工作室业务管理与信息流转。" data-en="A piano studio management mini program for studio operations and information workflows.">钟于钢琴工作室管理小程序，面向工作室业务管理与信息流转。</p>
-              <a href="https://github.com/Tomhao10225101490/ZhongYu_Piano_Studio" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="钟于钢琴工作室管理小程序，面向工作室业务管理与信息流转。" data-en="A piano studio management mini program for studio operations and information workflows." data-ja="鍾于ピアノスタジオ管理ミニプログラム。スタジオ業務管理と情報流通向け。" data-ko="ZhongYu 피아노 스튜디오 관리 미니 프로그램. 스튜디오 업무 관리와 정보 흐름을 위한 도구.">钟于钢琴工作室管理小程序，面向工作室业务管理与信息流转。</p>
+              <a href="https://github.com/Tomhao10225101490/ZhongYu_Piano_Studio" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span data-zh="研究实践" data-en="Research">研究实践</span><span>UAV</span></div>
+              <div class="project-meta"><span data-zh="研究实践" data-en="Research" data-ja="研究実践" data-ko="연구 실습">研究实践</span><span>UAV</span></div>
               <h3>UAVs_masac_tom_hao</h3>
-              <p data-zh="无人机与 MASAC 方向的研究实践仓库，用于沉淀 2026 年相关探索。" data-en="A UAV and MASAC research-practice repository for recording related exploration in 2026.">无人机与 MASAC 方向的研究实践仓库，用于沉淀 2026 年相关探索。</p>
-              <a href="https://github.com/Tomhao10225101490/UAVs_masac_tom_hao" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="无人机与 MASAC 方向的研究实践仓库，用于沉淀 2026 年相关探索。" data-en="A UAV and MASAC research-practice repository for recording related exploration in 2026." data-ja="UAV と MASAC 方向の研究実践リポジトリ。2026 年の関連探求を記録。" data-ko="UAV 및 MASAC 연구 실습 저장소. 2026년 관련 탐구를 기록합니다.">无人机与 MASAC 方向的研究实践仓库，用于沉淀 2026 年相关探索。</p>
+              <a href="https://github.com/Tomhao10225101490/UAVs_masac_tom_hao" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>CSAPP</span><span data-zh="助教空间" data-en="TA Space">助教空间</span></div>
+              <div class="project-meta"><span>CSAPP</span><span data-zh="助教空间" data-en="TA Space" data-ja="TA スペース" data-ko="TA 공간">助教空间</span></div>
               <h3>CSAPP_tom_HAO</h3>
-              <p data-zh="CSAPP 相关助教空间，整理课程辅助材料、代码和学习记录。" data-en="A CSAPP teaching-assistant space for course support materials, code, and learning notes.">CSAPP 相关助教空间，整理课程辅助材料、代码和学习记录。</p>
-              <a href="https://github.com/Tomhao10225101490/CSAPP_tom_HAO" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="CSAPP 相关助教空间，整理课程辅助材料、代码和学习记录。" data-en="A CSAPP teaching-assistant space for course support materials, code, and learning notes." data-ja="CSAPP 関連 TA スペース。授業補助資料、コード、学習記録を整理。" data-ko="CSAPP 관련 TA 공간. 수업 보조 자료, 코드, 학습 기록을 정리합니다.">CSAPP 相关助教空间，整理课程辅助材料、代码和学习记录。</p>
+              <a href="https://github.com/Tomhao10225101490/CSAPP_tom_HAO" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>C++</span><span data-zh="编译器" data-en="Compiler">编译器</span></div>
+              <div class="project-meta"><span>C++</span><span data-zh="编译器" data-en="Compiler" data-ja="コンパイラ" data-ko="컴파일러">编译器</span></div>
               <h3>compiler-lab2024</h3>
-              <p data-zh="2024 年编译原理 Lab，实现 C 编译器，供 ECNU 后辈学习借鉴。" data-en="A 2024 compiler-principles lab implementing a C compiler, shared as a reference for ECNU students.">2024 年编译原理 Lab，实现 C 编译器，供 ECNU 后辈学习借鉴。</p>
-              <a href="https://github.com/Tomhao10225101490/compiler-lab2024" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="2024 年编译原理 Lab，实现 C 编译器，供 ECNU 后辈学习借鉴。" data-en="A 2024 compiler-principles lab implementing a C compiler, shared as a reference for ECNU students." data-ja="2024 年コンパイラ原理 Lab。C コンパイラを実装し、ECNU 後輩の参考に。" data-ko="2024년 컴파일러 원리 Lab. C 컴파일러를 구현해 ECNU 후배들의 참고 자료로 공유.">2024 年编译原理 Lab，实现 C 编译器，供 ECNU 后辈学习借鉴。</p>
+              <a href="https://github.com/Tomhao10225101490/compiler-lab2024" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>HTML</span><span data-zh="AI 课堂" data-en="AI Lecture">AI 课堂</span></div>
+              <div class="project-meta"><span>HTML</span><span data-zh="AI 课堂" data-en="AI Lecture" data-ja="AI 講座" data-ko="AI 강의">AI 课堂</span></div>
               <h3>ai_lecture_pic</h3>
-              <p data-zh="AI 课堂页面的图片上传功能实验，面向讲座内容与图像资料管理。" data-en="An AI lecture page experiment adding picture upload for lecture content and image materials.">AI 课堂页面的图片上传功能实验，面向讲座内容与图像资料管理。</p>
-              <a href="https://github.com/Tomhao10225101490/ai_lecture_pic" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="AI 课堂页面的图片上传功能实验，面向讲座内容与图像资料管理。" data-en="An AI lecture page experiment adding picture upload for lecture content and image materials." data-ja="AI 講座ページの画像アップロード機能実験。講義内容と画像資料管理向け。" data-ko="AI 강의 페이지의 이미지 업로드 기능 실험. 강의 콘텐츠와 이미지 자료 관리용.">AI 课堂页面的图片上传功能实验，面向讲座内容与图像资料管理。</p>
+              <a href="https://github.com/Tomhao10225101490/ai_lecture_pic" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>HTML</span><span data-zh="评论功能" data-en="Comments">评论功能</span></div>
+              <div class="project-meta"><span>HTML</span><span data-zh="评论功能" data-en="Comments" data-ja="コメント機能" data-ko="댓글 기능">评论功能</span></div>
               <h3>ai_lecture11_11</h3>
-              <p data-zh="AI 课堂项目的评论功能迭代版本，用于练习页面交互和内容反馈。" data-en="An iteration of the AI lecture project with comment functionality for interaction and feedback practice.">AI 课堂项目的评论功能迭代版本，用于练习页面交互和内容反馈。</p>
-              <a href="https://github.com/Tomhao10225101490/ai_lecture11_11" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="AI 课堂项目的评论功能迭代版本，用于练习页面交互和内容反馈。" data-en="An iteration of the AI lecture project with comment functionality for interaction and feedback practice." data-ja="AI 講座プロジェクトのコメント機能イテレーション。ページ操作とフィードバック練習用。" data-ko="AI 강의 프로젝트의 댓글 기능 반복 버전. 페이지 상호작용과 피드백 연습용.">AI 课堂项目的评论功能迭代版本，用于练习页面交互和内容反馈。</p>
+              <a href="https://github.com/Tomhao10225101490/ai_lecture11_11" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>HTML</span><span data-zh="AI 课堂" data-en="AI Lecture">AI 课堂</span></div>
+              <div class="project-meta"><span>HTML</span><span data-zh="AI 课堂" data-en="AI Lecture" data-ja="AI 講座" data-ko="AI 강의">AI 课堂</span></div>
               <h3>ai_lecture</h3>
-              <p data-zh="AI 课堂 Web 实验项目，作为后续图片上传与评论功能迭代的基础。" data-en="An AI lecture web experiment that serves as the base for later image upload and comment iterations.">AI 课堂 Web 实验项目，作为后续图片上传与评论功能迭代的基础。</p>
-              <a href="https://github.com/Tomhao10225101490/ai_lecture" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="AI 课堂 Web 实验项目，作为后续图片上传与评论功能迭代的基础。" data-en="An AI lecture web experiment that serves as the base for later image upload and comment iterations." data-ja="AI 講座 Web 実験プロジェクト。後続の画像アップロード・コメント機能の基盤。" data-ko="AI 강의 웹 실험 프로젝트. 이후 이미지 업로드·댓글 기능 반복의 기반.">AI 课堂 Web 实验项目，作为后续图片上传与评论功能迭代的基础。</p>
+              <a href="https://github.com/Tomhao10225101490/ai_lecture" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>HTML</span><span data-zh="AI 写作" data-en="AI Writing">AI 写作</span></div>
+              <div class="project-meta"><span>HTML</span><span data-zh="AI 写作" data-en="AI Writing" data-ja="AI ライティング" data-ko="AI 글쓰기">AI 写作</span></div>
               <h3>loving_write</h3>
-              <p data-zh="ECNU 在线 AI 写作助手，探索智能写作辅助的网页交互。" data-en="An ECNU online AI writing assistant exploring web interaction for intelligent writing support.">ECNU 在线 AI 写作助手，探索智能写作辅助的网页交互。</p>
-              <a href="https://github.com/Tomhao10225101490/loving_write" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="ECNU 在线 AI 写作助手，探索智能写作辅助的网页交互。" data-en="An ECNU online AI writing assistant exploring web interaction for intelligent writing support." data-ja="ECNU オンライン AI ライティングアシスタント。インテリジェント執筆支援の Web 操作を探求。" data-ko="ECNU 온라인 AI 글쓰기 어시스턴트. 지능형 글쓰기 보조 웹 상호작용을 탐구합니다.">ECNU 在线 AI 写作助手，探索智能写作辅助的网页交互。</p>
+              <a href="https://github.com/Tomhao10225101490/loving_write" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
               <div class="project-meta"><span>JavaScript</span><span>Todo</span></div>
               <h3>HAOZI_TODO</h3>
-              <p data-zh="简单 Todo List Web 项目，用于练习任务管理交互和前端状态组织。" data-en="A simple todo-list web project for practicing task interactions and frontend state organization.">简单 Todo List Web 项目，用于练习任务管理交互和前端状态组织。</p>
-              <a href="https://github.com/Tomhao10225101490/HAOZI_TODO" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="简单 Todo List Web 项目，用于练习任务管理交互和前端状态组织。" data-en="A simple todo-list web project for practicing task interactions and frontend state organization." data-ja="シンプルな Todo List Web プロジェクト。タスク管理操作とフロントエンド状態整理の練習用。" data-ko="간단한 Todo List 웹 프로젝트. 작업 관리 상호작용과 프론트엔드 상태 구성 연습용.">简单 Todo List Web 项目，用于练习任务管理交互和前端状态组织。</p>
+              <a href="https://github.com/Tomhao10225101490/HAOZI_TODO" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>HTML</span><span data-zh="钢琴脚本" data-en="Piano Script">钢琴脚本</span></div>
+              <div class="project-meta"><span>HTML</span><span data-zh="钢琴脚本" data-en="Piano Script" data-ja="ピアノスクリプト" data-ko="피아노 스크립트">钢琴脚本</span></div>
               <h3>HAOZI_PIANO</h3>
-              <p data-zh="从网页绘制钢琴脚本的实验项目，连接音乐场景和前端表达。" data-en="An experiment for drawing piano scripts from the web, connecting music scenarios with frontend expression.">从网页绘制钢琴脚本的实验项目，连接音乐场景和前端表达。</p>
-              <a href="https://github.com/Tomhao10225101490/HAOZI_PIANO" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="从网页绘制钢琴脚本的实验项目，连接音乐场景和前端表达。" data-en="An experiment for drawing piano scripts from the web, connecting music scenarios with frontend expression." data-ja="Web からピアノスクリプトを描画する実験プロジェクト。音楽シーンとフロントエンド表現をつなぐ。" data-ko="웹에서 피아노 스크립트를 그리는 실험 프로젝트. 음악 장면과 프론트엔드 표현을 연결합니다.">从网页绘制钢琴脚本的实验项目，连接音乐场景和前端表达。</p>
+              <a href="https://github.com/Tomhao10225101490/HAOZI_PIANO" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span data-zh="教育" data-en="Education">教育</span><span data-zh="云端" data-en="Cloud">云端</span></div>
+              <div class="project-meta"><span data-zh="教育" data-en="Education" data-ja="教育" data-ko="교육">教育</span><span data-zh="云端" data-en="Cloud" data-ja="クラウド" data-ko="클라우드">云端</span></div>
               <h3>cloud_edu</h3>
-              <p data-zh="云教育方向的公开项目，后续可继续补充业务背景、功能和技术细节。" data-en="A public cloud-education project, ready for more business context, features, and technical details.">云教育方向的公开项目，后续可继续补充业务背景、功能和技术细节。</p>
-              <a href="https://github.com/Tomhao10225101490/cloud_edu" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="云教育方向的公开项目，后续可继续补充业务背景、功能和技术细节。" data-en="A public cloud-education project, ready for more business context, features, and technical details." data-ja="クラウド教育方向の公開プロジェクト。今後、業務背景・機能・技術詳細を追加可能。" data-ko="클라우드 교육 방향의 공개 프로젝트. 이후 비즈니스 배경, 기능, 기술 세부를 추가할 수 있습니다.">云教育方向的公开项目，后续可继续补充业务背景、功能和技术细节。</p>
+              <a href="https://github.com/Tomhao10225101490/cloud_edu" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>HTML</span><span data-zh="动漫网站" data-en="Anime Site">动漫网站</span></div>
+              <div class="project-meta"><span>HTML</span><span data-zh="动漫网站" data-en="Anime Site" data-ja="アニメサイト" data-ko="애니 사이트">动漫网站</span></div>
               <h3>haozi_anime</h3>
-              <p data-zh="动漫主题网站项目，练习内容展示、页面结构和视觉呈现。" data-en="An anime-themed website project for practicing content display, page structure, and visual presentation.">动漫主题网站项目，练习内容展示、页面结构和视觉呈现。</p>
-              <a href="https://github.com/Tomhao10225101490/haozi_anime" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="动漫主题网站项目，练习内容展示、页面结构和视觉呈现。" data-en="An anime-themed website project for practicing content display, page structure, and visual presentation." data-ja="アニメテーマの Web プロジェクト。コンテンツ展示、ページ構造、ビジュアル表現の練習。" data-ko="애니 테마 웹 프로젝트. 콘텐츠 표시, 페이지 구조, 시각적 표현 연습.">动漫主题网站项目，练习内容展示、页面结构和视觉呈现。</p>
+              <a href="https://github.com/Tomhao10225101490/haozi_anime" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>Python</span><span data-zh="游戏" data-en="Game">游戏</span></div>
+              <div class="project-meta"><span>Python</span><span data-zh="游戏" data-en="Game" data-ja="ゲーム" data-ko="게임">游戏</span></div>
               <h3>game_python</h3>
-              <p data-zh="Python 游戏练习项目，用于记录游戏逻辑、交互和脚本能力。" data-en="A Python game-practice project recording game logic, interaction, and scripting skills.">Python 游戏练习项目，用于记录游戏逻辑、交互和脚本能力。</p>
-              <a href="https://github.com/Tomhao10225101490/game_python" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="Python 游戏练习项目，用于记录游戏逻辑、交互和脚本能力。" data-en="A Python game-practice project recording game logic, interaction, and scripting skills." data-ja="Python ゲーム練習プロジェクト。ゲームロジック、操作、スクリプト能力を記録。" data-ko="Python 게임 연습 프로젝트. 게임 로직, 상호작용, 스크립트 역량을 기록합니다.">Python 游戏练习项目，用于记录游戏逻辑、交互和脚本能力。</p>
+              <a href="https://github.com/Tomhao10225101490/game_python" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>Python</span><span data-zh="编程练习" data-en="Practice">编程练习</span></div>
+              <div class="project-meta"><span>Python</span><span data-zh="编程练习" data-en="Practice" data-ja="プログラミング練習" data-ko="프로그래밍 연습">编程练习</span></div>
               <h3>TomhaoPython</h3>
-              <p data-zh="Python 学习与代码仓库，沉淀日常脚本、练习和语言基础。" data-en="A Python learning repository collecting daily scripts, exercises, and language fundamentals.">Python 学习与代码仓库，沉淀日常脚本、练习和语言基础。</p>
-              <a href="https://github.com/Tomhao10225101490/TomhaoPython" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="Python 学习与代码仓库，沉淀日常脚本、练习和语言基础。" data-en="A Python learning repository collecting daily scripts, exercises, and language fundamentals." data-ja="Python 学習・コードリポジトリ。日常スクリプト、練習、言語基礎を蓄積。" data-ko="Python 학습·코드 저장소. 일상 스크립트, 연습, 언어 기초를 축적합니다.">Python 学习与代码仓库，沉淀日常脚本、练习和语言基础。</p>
+              <a href="https://github.com/Tomhao10225101490/TomhaoPython" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span>C++</span><span data-zh="编程练习" data-en="Practice">编程练习</span></div>
+              <div class="project-meta"><span>C++</span><span data-zh="编程练习" data-en="Practice" data-ja="プログラミング練習" data-ko="프로그래밍 연습">编程练习</span></div>
               <h3>TomhaonoCPP</h3>
-              <p data-zh="C++ 代码仓库，记录算法、课程和工程练习中的 C++ 代码。" data-en="A C++ code repository recording algorithms, coursework, and engineering practice.">C++ 代码仓库，记录算法、课程和工程练习中的 C++ 代码。</p>
-              <a href="https://github.com/Tomhao10225101490/TomhaonoCPP" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="C++ 代码仓库，记录算法、课程和工程练习中的 C++ 代码。" data-en="A C++ code repository recording algorithms, coursework, and engineering practice." data-ja="C++ コードリポジトリ。アルゴリズム、授業、エンジニアリング練習の C++ コードを記録。" data-ko="C++ 코드 저장소. 알고리즘, 수업, 엔지니어링 연습의 C++ 코드를 기록합니다.">C++ 代码仓库，记录算法、课程和工程练习中的 C++ 代码。</p>
+              <a href="https://github.com/Tomhao10225101490/TomhaonoCPP" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card">
-              <div class="project-meta"><span data-zh="资料" data-en="Profile">资料</span><span>GitHub</span></div>
+              <div class="project-meta"><span data-zh="资料" data-en="Profile" data-ja="資料" data-ko="자료">资料</span><span>GitHub</span></div>
               <h3>Tomhao10225101490</h3>
-              <p data-zh="GitHub Profile 配置仓库，用于管理个人页 README 和公开展示内容。" data-en="GitHub profile configuration repository for managing the profile README and public presentation.">GitHub Profile 配置仓库，用于管理个人页 README 和公开展示内容。</p>
-              <a href="https://github.com/Tomhao10225101490/Tomhao10225101490" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="GitHub Profile 配置仓库，用于管理个人页 README 和公开展示内容。" data-en="GitHub profile configuration repository for managing the profile README and public presentation." data-ja="GitHub Profile 設定リポジトリ。プロフィール README と公開コンテンツを管理。" data-ko="GitHub Profile 설정 저장소. 프로필 README와 공개 콘텐츠를 관리합니다.">GitHub Profile 配置仓库，用于管理个人页 README 和公开展示内容。</p>
+              <a href="https://github.com/Tomhao10225101490/Tomhao10225101490" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card is-resource">
-              <div class="project-meta"><span data-zh="资料 Fork" data-en="Resource Fork">资料 Fork</span><span>BUPT</span></div>
+              <div class="project-meta"><span data-zh="资料 Fork" data-en="Resource Fork" data-ja="資料 Fork" data-ko="자료 Fork">资料 Fork</span><span>BUPT</span></div>
               <h3>BUPT_SCS_Resources</h3>
-              <p data-zh="北邮计科考试试卷资料整理仓库的 Fork，用作学习资料索引。" data-en="A fork of BUPT computer-science exam resources, kept as a study-material index.">北邮计科考试试卷资料整理仓库的 Fork，用作学习资料索引。</p>
-              <a href="https://github.com/Tomhao10225101490/BUPT_SCS_Resources" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="北邮计科考试试卷资料整理仓库的 Fork，用作学习资料索引。" data-en="A fork of BUPT computer-science exam resources, kept as a study-material index." data-ja="北京郵電大学 CS 試験資料整理リポジトリの Fork。学習資料索引として利用。" data-ko="북경우전대학 CS 시험 자료 정리 저장소 Fork. 학습 자료 색인으로 활용.">北邮计科考试试卷资料整理仓库的 Fork，用作学习资料索引。</p>
+              <a href="https://github.com/Tomhao10225101490/BUPT_SCS_Resources" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card is-resource">
-              <div class="project-meta"><span data-zh="资料 Fork" data-en="Resource Fork">资料 Fork</span><span data-zh="电子书" data-en="Books">电子书</span></div>
+              <div class="project-meta"><span data-zh="资料 Fork" data-en="Resource Fork" data-ja="資料 Fork" data-ko="자료 Fork">资料 Fork</span><span data-zh="电子书" data-en="Books" data-ja="電子書籍" data-ko="전자책">电子书</span></div>
               <h3>-</h3>
-              <p data-zh="免费电子书与计算机学习资料仓库的 Fork，用于整理学习资源入口。" data-en="A fork of free e-book and computer-learning resources, kept as a study-resource entry.">免费电子书与计算机学习资料仓库的 Fork，用于整理学习资源入口。</p>
-              <a href="https://github.com/Tomhao10225101490/-" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="免费电子书与计算机学习资料仓库的 Fork，用于整理学习资源入口。" data-en="A fork of free e-book and computer-learning resources, kept as a study-resource entry." data-ja="無料電子書籍・コンピュータ学習資料リポジトリの Fork。学習リソース入口を整理。" data-ko="무료 전자책·컴퓨터 학습 자료 저장소 Fork. 학습 자료 진입점을 정리.">免费电子书与计算机学习资料仓库的 Fork，用于整理学习资源入口。</p>
+              <a href="https://github.com/Tomhao10225101490/-" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card is-resource">
-              <div class="project-meta"><span data-zh="资料 Fork" data-en="Resource Fork">资料 Fork</span><span data-zh="电子书" data-en="Books">电子书</span></div>
+              <div class="project-meta"><span data-zh="资料 Fork" data-en="Resource Fork" data-ja="資料 Fork" data-ko="자료 Fork">资料 Fork</span><span data-zh="电子书" data-en="Books" data-ja="電子書籍" data-ko="전자책">电子书</span></div>
               <h3>cs_ibook</h3>
-              <p data-zh="计算机学习电子书资料仓库的 Fork，用于沉淀课程与自学参考。" data-en="A fork of computer-science e-book resources for coursework and self-study references.">计算机学习电子书资料仓库的 Fork，用于沉淀课程与自学参考。</p>
-              <a href="https://github.com/Tomhao10225101490/cs_ibook" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="计算机学习电子书资料仓库的 Fork，用于沉淀课程与自学参考。" data-en="A fork of computer-science e-book resources for coursework and self-study references." data-ja="コンピュータ学習電子書籍リポジトリの Fork。授業・独学の参考として蓄積。" data-ko="컴퓨터 학습 전자책 저장소 Fork. 수업·자기학습 참고 자료로 축적.">计算机学习电子书资料仓库的 Fork，用于沉淀课程与自学参考。</p>
+              <a href="https://github.com/Tomhao10225101490/cs_ibook" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
 
             <article class="project-card is-resource">
-              <div class="project-meta"><span>JavaScript</span><span data-zh="网页作业" data-en="Web Assignment">网页作业</span></div>
+              <div class="project-meta"><span>JavaScript</span><span data-zh="网页作业" data-en="Web Assignment" data-ja="Web 課題" data-ko="웹 과제">网页作业</span></div>
               <h3>one_web_task</h3>
-              <p data-zh="大一第一学期网页设计期末作业，漫画网站方向的前端练习。" data-en="A first-semester web design final assignment, practicing a manga-site frontend.">大一第一学期网页设计期末作业，漫画网站方向的前端练习。</p>
-              <a href="https://github.com/Tomhao10225101490/one_web_task" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository">查看仓库</a>
+              <p data-zh="大一第一学期网页设计期末作业，漫画网站方向的前端练习。" data-en="A first-semester web design final assignment, practicing a manga-site frontend." data-ja="1 年次第 1 学期 Web デザイン期末課題。漫画サイト方向のフロントエンド練習。" data-ko="1학년 1학기 웹 디자인 기말 과제. 만화 사이트 방향의 프론트엔드 연습.">大一第一学期网页设计期末作业，漫画网站方向的前端练习。</p>
+              <a href="https://github.com/Tomhao10225101490/one_web_task" target="_blank" rel="noreferrer" data-zh="查看仓库" data-en="View repository" data-ja="リポジトリを見る" data-ko="저장소 보기">查看仓库</a>
             </article>
           </div>
         </div>
@@ -382,32 +384,32 @@
 
       <section class="contact-band section-reveal" id="contact" aria-labelledby="contact-title">
         <div class="contact-copy">
-          <p class="section-kicker" data-zh="联系" data-en="Contact">联系</p>
-          <h2 id="contact-title" data-zh="欢迎交流项目、研究与合作想法。" data-en="Open to ideas around projects, research, and collaboration.">
+          <p class="section-kicker" data-zh="联系" data-en="Contact" data-ja="連絡" data-ko="연락">联系</p>
+          <h2 id="contact-title" data-zh="欢迎交流项目、研究与合作想法。" data-en="Open to ideas around projects, research, and collaboration." data-ja="プロジェクト、研究、協力のアイデアを歓迎します。" data-ko="프로젝트, 연구, 협업 아이디어를 환영합니다.">
             欢迎交流项目、研究与合作想法。
           </h2>
-          <p data-zh="可以通过邮件联系我，也可以扫码关注微信公众号或 Instagram。" data-en="Reach me by email, or scan the QR codes to follow my WeChat official account and Instagram.">
+          <p data-zh="可以通过邮件联系我，也可以扫码关注微信公众号或 Instagram。" data-en="Reach me by email, or scan the QR codes to follow my WeChat official account and Instagram." data-ja="メールで連絡いただくか、QR コードから WeChat 公式アカウントまたは Instagram をフォローしてください。" data-ko="이메일로 연락하거나 QR 코드로 WeChat 공식 계정 또는 Instagram을 팔로우해 주세요.">
             可以通过邮件联系我，也可以扫码关注微信公众号或 Instagram。
           </p>
         </div>
-        <div class="contact-panel" aria-label="联系方式">
+        <div class="contact-panel" aria-label="联系方式" data-zh="联系方式" data-en="Contact information" data-ja="連絡先" data-ko="연락처" data-i18n="aria-label">
           <div class="contact-actions">
             <a class="button primary" href="mailto:2177686531@qq.com">2177686531@qq.com</a>
             <a class="button secondary" href="https://github.com/Tomhao10225101490" target="_blank" rel="noreferrer">GitHub</a>
           </div>
           <div class="qr-grid">
             <article class="qr-card">
-              <img src="assets/wechat-official-account.jpg" alt="微信公众号浩子学长二维码">
+              <img src="assets/wechat-official-account.jpg" alt="微信公众号浩子学长二维码" data-zh="微信公众号浩子学长二维码" data-en="QR code for WeChat official account 浩子学长" data-ja="WeChat 公式アカウント「浩子学长」の QR コード" data-ko="WeChat 공식 계정 浩子学长 QR 코드" data-i18n="alt">
               <div>
-                <h3 data-zh="微信公众号" data-en="WeChat Official Account">微信公众号</h3>
-                <p data-zh="扫码关注：浩子学长" data-en="Scan to follow: 浩子学长">扫码关注：浩子学长</p>
+                <h3 data-zh="微信公众号" data-en="WeChat Official Account" data-ja="WeChat 公式アカウント" data-ko="WeChat 공식 계정">微信公众号</h3>
+                <p data-zh="扫码关注：浩子学长" data-en="Scan to follow: 浩子学长" data-ja="QR コードでフォロー：浩子学长" data-ko="QR 코드로 팔로우: 浩子学长">扫码关注：浩子学长</p>
               </div>
             </article>
             <article class="qr-card">
-              <img src="assets/instagram-qr.jpg" alt="Instagram @TOMHAO666 二维码">
+              <img src="assets/instagram-qr.jpg" alt="Instagram @TOMHAO666 二维码" data-zh="Instagram @TOMHAO666 二维码" data-en="QR code for Instagram @TOMHAO666" data-ja="Instagram @TOMHAO666 の QR コード" data-ko="Instagram @TOMHAO666 QR 코드" data-i18n="alt">
               <div>
                 <h3>Instagram</h3>
-                <p data-zh="扫码关注：@TOMHAO666" data-en="Scan to follow: @TOMHAO666">扫码关注：@TOMHAO666</p>
+                <p data-zh="扫码关注：@TOMHAO666" data-en="Scan to follow: @TOMHAO666" data-ja="QR コードでフォロー：@TOMHAO666" data-ko="QR 코드로 팔로우: @TOMHAO666">扫码关注：@TOMHAO666</p>
               </div>
             </article>
           </div>
@@ -416,8 +418,8 @@
     </main>
 
     <footer class="site-footer">
-      <span data-zh="钟浩 · 华东师范大学软件工程学院" data-en="Zhong Hao · School of Software Engineering, ECNU">钟浩 · 华东师范大学软件工程学院</span>
-      <a href="#top" data-zh="回到顶部" data-en="Back to top">回到顶部</a>
+      <span data-zh="钟浩 · 华东师范大学软件工程学院" data-en="Zhong Hao · School of Software Engineering, ECNU" data-ja="鍾浩 · 華東師範大学ソフトウェア工程学院" data-ko="종하오 · 동화사범대학교 소프트웨어공학대학">钟浩 · 华东师范大学软件工程学院</span>
+      <a href="#top" data-zh="回到顶部" data-en="Back to top" data-ja="トップへ戻る" data-ko="맨 위로">回到顶部</a>
     </footer>
 
     <script src="script.js"></script>

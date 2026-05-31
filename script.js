@@ -1,7 +1,9 @@
 const root = document.documentElement;
-const toggle = document.querySelector("#langToggle");
-const labels = document.querySelectorAll("[data-lang-label]");
-const translatable = document.querySelectorAll("[data-zh][data-en]");
+const langSwitcher = document.querySelector("#langSwitcher");
+const langOptions = document.querySelectorAll(".lang-option[data-lang-label]");
+const translatable = document.querySelectorAll("[data-zh][data-en][data-ja][data-ko]");
+const attributeTargets = document.querySelectorAll("[data-i18n][data-zh][data-en][data-ja][data-ko]");
+const metaDescription = document.querySelector("#metaDescription");
 const revealItems = document.querySelectorAll(".section-reveal");
 const progressBar = document.querySelector(".scroll-progress");
 const cursorGlow = document.querySelector(".cursor-glow");
@@ -13,27 +15,65 @@ const sectionTargets = navLinks
 const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 const canAnimate = !motionQuery.matches;
 
-const setLanguage = (language) => {
-  const nextLanguage = language === "en" ? "en" : "zh";
+const SUPPORTED_LANGUAGES = ["zh", "en", "ja", "ko"];
+const HTML_LANG = {
+  zh: "zh-CN",
+  en: "en",
+  ja: "ja",
+  ko: "ko"
+};
+const PAGE_TITLES = {
+  zh: "钟浩 | Tomhao10225101490",
+  en: "Zhong Hao | Tomhao10225101490",
+  ja: "鍾浩 | Tomhao10225101490",
+  ko: "종하오 | Tomhao10225101490"
+};
+const META_DESCRIPTIONS = {
+  zh: "钟浩，华东师范大学软件工程学院，人工智能、机器学习、AI 交易与量化交易方向。",
+  en: "Zhong Hao, School of Software Engineering at ECNU, focused on AI, machine learning, AI trading, and quantitative trading.",
+  ja: "鍾浩、華東師範大学ソフトウェア工程学院。人工知能、機械学習、AI トレード、クオンツ取引を専門としています。",
+  ko: "종하오, 동화사범대학교 소프트웨어공학대학. 인공지능, 머신러닝, AI 트레이딩, 퀀트 트레이딩 분야."
+};
 
-  root.lang = nextLanguage === "en" ? "en" : "zh-CN";
-  document.title = nextLanguage === "en" ? "Zhong Hao | Tomhao10225101490" : "钟浩 | Tomhao10225101490";
+const normalizeLanguage = (language) => (
+  SUPPORTED_LANGUAGES.includes(language) ? language : "zh"
+);
+
+const setLanguage = (language) => {
+  const nextLanguage = normalizeLanguage(language);
+
+  root.lang = HTML_LANG[nextLanguage];
+  document.title = PAGE_TITLES[nextLanguage];
 
   translatable.forEach((element) => {
+    if (element.dataset.i18n) {
+      return;
+    }
     element.textContent = element.dataset[nextLanguage];
   });
 
-  labels.forEach((label) => {
-    label.classList.toggle("is-active", label.dataset.langLabel === nextLanguage);
+  attributeTargets.forEach((element) => {
+    const attributeName = element.dataset.i18n;
+    element.setAttribute(attributeName, element.dataset[nextLanguage]);
   });
 
-  toggle.setAttribute("aria-pressed", String(nextLanguage === "en"));
+  if (metaDescription) {
+    metaDescription.setAttribute("content", META_DESCRIPTIONS[nextLanguage]);
+  }
+
+  langOptions.forEach((option) => {
+    const isActive = option.dataset.langLabel === nextLanguage;
+    option.classList.toggle("is-active", isActive);
+    option.setAttribute("aria-pressed", String(isActive));
+  });
+
   window.localStorage.setItem("preferred-language", nextLanguage);
 };
 
-toggle.addEventListener("click", () => {
-  const currentLanguage = root.lang === "en" ? "en" : "zh";
-  setLanguage(currentLanguage === "en" ? "zh" : "en");
+langOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    setLanguage(option.dataset.langLabel);
+  });
 });
 
 const revealObserver = new IntersectionObserver(

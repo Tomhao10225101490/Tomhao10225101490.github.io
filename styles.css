@@ -302,13 +302,13 @@ figcaption,
   transform: scaleX(1);
 }
 
-.lang-toggle {
+.lang-switcher {
   position: relative;
   z-index: 1;
   display: inline-grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 2px;
-  width: 92px;
+  width: 168px;
   height: 38px;
   padding: 3px;
   border: 1px solid var(--line);
@@ -317,15 +317,20 @@ figcaption,
   background:
     linear-gradient(135deg, rgba(102, 229, 186, 0.08), rgba(117, 215, 255, 0.04)),
     rgba(245, 241, 232, 0.05);
-  cursor: pointer;
 }
 
 .lang-option {
   display: grid;
   place-items: center;
+  border: 0;
   border-radius: 999px;
-  font-size: 13px;
+  padding: 0;
+  font: inherit;
+  font-size: 12px;
   font-weight: 800;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
 }
 
 .lang-option.is-active {
@@ -1383,8 +1388,12 @@ figcaption {
     font-size: 13px;
   }
 
-  .lang-toggle {
-    width: 82px;
+  .lang-switcher {
+    width: 148px;
+  }
+
+  .lang-option {
+    font-size: 11px;
   }
 
   .hero {
