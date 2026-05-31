@@ -8,10 +8,14 @@ const baseDirWithSep = baseDir.endsWith(path.sep) ? baseDir : baseDir + path.sep
 const mimeTypes = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
+  ".js": "text/javascript; charset=utf-8",
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
   ".png": "image/png",
-  ".svg": "image/svg+xml"
+  ".svg": "image/svg+xml",
+  ".webmanifest": "application/manifest+json; charset=utf-8",
+  ".vcf": "text/vcard; charset=utf-8",
+  ".json": "application/json; charset=utf-8"
 };
 
 const server = http.createServer((request, response) => {
@@ -41,4 +45,5 @@ const server = http.createServer((request, response) => {
 
 server.listen(port, "127.0.0.1", () => {
   console.log(`Preview available at http://127.0.0.1:${port}/`);
+  console.log(`Digital card: http://127.0.0.1:${port}/card.html`);
 });

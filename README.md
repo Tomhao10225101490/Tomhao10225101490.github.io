@@ -10,12 +10,33 @@
 node preview-server.js
 ```
 
-然后访问 `http://127.0.0.1:4173/`。
+然后访问：
+
+- 完整主页：`http://127.0.0.1:4173/`
+- 手机数字名片：`http://127.0.0.1:4173/card.html`
+
+## 数字名片（推荐分享）
+
+适合在微信、QQ、Instagram 群聊或 Bio 中分享：
+
+`https://tomhao10225101490.github.io/card.html`
+
+名片页提供：
+
+- 一屏身份介绍与精选亮点
+- 底部快捷操作：邮件、GitHub、复制链接、保存联系人（vCard）
+- 微信公众号 / Instagram 二维码放大查看
+- 四语言切换（中 / EN / 日 / 한）
+- 可「添加到主屏幕」（PWA）
+
+完整项目与荣誉详情仍请访问主页：
+
+`https://tomhao10225101490.github.io/`
 
 ## 发布到 GitHub Pages
 
 1. 在 GitHub 新建仓库，仓库名使用 `Tomhao10225101490.github.io`。
-2. 把本目录中的 `index.html`、`styles.css`、`script.js` 和 `assets/profile.jpg` 上传到仓库根目录。
+2. 把本目录中的页面、样式、脚本、`manifest.webmanifest`、`sw.js` 和 `assets/` 上传到仓库根目录。
 3. 进入仓库的 `Settings` -> `Pages`，选择从 `main` 分支根目录发布。
 4. 等待 GitHub Pages 构建完成后，访问 `https://tomhao10225101490.github.io/`。
 
