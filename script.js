@@ -1,12 +1,10 @@
 const root = document.documentElement;
-const langSwitcher = document.querySelector("#langSwitcher");
 const langOptions = document.querySelectorAll(".lang-option[data-lang-label]");
 const translatable = document.querySelectorAll("[data-zh][data-en][data-ja][data-ko]");
 const attributeTargets = document.querySelectorAll("[data-i18n][data-zh][data-en][data-ja][data-ko]");
 const metaDescription = document.querySelector("#metaDescription");
 const revealItems = document.querySelectorAll(".section-reveal");
 const progressBar = document.querySelector(".scroll-progress");
-const cursorGlow = document.querySelector(".cursor-glow");
 const portraitPanel = document.querySelector(".portrait-panel");
 const navLinks = Array.from(document.querySelectorAll(".nav a[href^='#']"));
 const sectionTargets = navLinks
@@ -39,6 +37,14 @@ const normalizeLanguage = (language) => (
   SUPPORTED_LANGUAGES.includes(language) ? language : "zh"
 );
 
+const markSectionVisible = (section) => {
+  section.classList.add("is-visible");
+};
+
+const revealAllSections = () => {
+  revealItems.forEach(markSectionVisible);
+};
+
 const setLanguage = (language) => {
   const nextLanguage = normalizeLanguage(language);
 
@@ -49,12 +55,19 @@ const setLanguage = (language) => {
     if (element.dataset.i18n) {
       return;
     }
-    element.textContent = element.dataset[nextLanguage];
+
+    const copy = element.dataset[nextLanguage];
+    if (typeof copy === "string") {
+      element.textContent = copy;
+    }
   });
 
   attributeTargets.forEach((element) => {
     const attributeName = element.dataset.i18n;
-    element.setAttribute(attributeName, element.dataset[nextLanguage]);
+    const copy = element.dataset[nextLanguage];
+    if (typeof copy === "string") {
+      element.setAttribute(attributeName, copy);
+    }
   });
 
   if (metaDescription) {
@@ -70,25 +83,49 @@ const setLanguage = (language) => {
   window.localStorage.setItem("preferred-language", nextLanguage);
 };
 
+const setupRevealAnimations = () => {
+  if (!canAnimate || revealItems.length === 0) {
+    revealAllSections();
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    revealAllSections();
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          markSectionVisible(entry.target);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.02 }
+  );
+
+  revealItems.forEach((item) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+      markSectionVisible(item);
+    }
+
+    revealObserver.observe(item);
+  });
+
+  root.classList.add("reveal-ready");
+  window.setTimeout(revealAllSections, 1800);
+};
+
 langOptions.forEach((option) => {
   option.addEventListener("click", () => {
     setLanguage(option.dataset.langLabel);
   });
 });
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { rootMargin: "0px 0px -8% 0px", threshold: 0.02 }
-);
-
-revealItems.forEach((item) => revealObserver.observe(item));
+setupRevealAnimations();
 
 const updateScrollProgress = () => {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
@@ -167,11 +204,17 @@ tiltTargets.forEach((card) => {
 });
 
 const canvas = document.querySelector("#sparkCanvas");
-const context = canvas?.getContext("2d");
+let context = null;
+
+try {
+  context = canvas?.getContext("2d") || null;
+} catch {
+  context = null;
+}
+
 let particles = [];
 let streaks = [];
 let pointer = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-let animationFrame = 0;
 let particleTick = 0;
 
 const particlePalette = [
@@ -309,8 +352,7 @@ const drawParticles = () => {
   });
 
   context.restore();
-
-  animationFrame = window.requestAnimationFrame(drawParticles);
+  window.requestAnimationFrame(drawParticles);
 };
 
 window.addEventListener("scroll", updateScrollProgress, { passive: true });
@@ -333,4 +375,8 @@ if (canvas && context && canAnimate) {
   drawParticles();
 }
 
-setLanguage(window.localStorage.getItem("preferred-language") || "zh");
+try {
+  setLanguage(window.localStorage.getItem("preferred-language") || "zh");
+} catch {
+  setLanguage("zh");
+}
